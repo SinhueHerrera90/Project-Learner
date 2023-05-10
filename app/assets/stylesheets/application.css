@@ -12,3 +12,33 @@
  *
  *= require_self
  */
+
+
+body{
+  background-color: #fffdfd;
+  opacity: 4;
+  background-image: radial-gradient(circle at center center, #f5f6f6, #d4d4d4);
+  background-blend-mode: multiply;
+background-blend-mode: multiply;
+
+ 
+  padding-top:10px;
+  padding-bottom:40x;
+ 
+}
+.name {
+  color: #f11010;
+  display:flex;
+  justify-content: center;
+  font-family: 'Rampart One', cursive;
+  font-size: 35px;
+}
+.banner-image{
+  margin: auto;
+  width:200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100%;
+  position: center;
+  display: flex;
+}

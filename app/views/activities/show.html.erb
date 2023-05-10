@@ -1,0 +1,116 @@
+<div>
+  <div>
+    <h1>
+      Activity #<%= @the_activity.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/activities">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_activity/<%= @the_activity.id %>">
+          Delete activity
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Category
+      </dt>
+      <dd>
+        <%= @the_activity.category_id %>
+      </dd>
+
+      <dt>
+        Name
+      </dt>
+      <dd>
+        <%= @the_activity.name %>
+      </dd>
+
+      <dt>
+        Description
+      </dt>
+      <dd>
+        <%= @the_activity.description %>
+      </dd>
+
+      <dt>
+        Location
+      </dt>
+      <dd>
+        <%= @the_activity.location_id %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_activity.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_activity.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit activity
+    </h2>
+
+    <form action="/modify_activity/<%= @the_activity.id %>"  method="post" >
+      <div>
+        <label for="category_id_box">
+          Category
+        </label>
+
+        <input type="text" id="category_id_box" name="query_category_id" value="<%= @the_activity.category_id %>">
+      </div>
+
+      <div>
+        <label for="name_box">
+          Name
+        </label>
+
+        <input type="text" id="name_box" name="query_name" value="<%= @the_activity.name %>">
+      </div>
+
+      <div>
+        <label for="description_box">
+          Description
+        </label>
+
+        <textarea id="description_box" name="query_description"><%= @the_activity.description %></textarea>
+      </div>
+
+      <div>
+        <label for="location_id_box">
+          Location
+        </label>
+
+        <input type="text" id="location_id_box" name="query_location_id" value="<%= @the_activity.location_id %>">
+      </div>
+
+      <button>
+        Update activity
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
